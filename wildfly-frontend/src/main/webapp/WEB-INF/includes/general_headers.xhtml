@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <title>Site menu</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <!-- Bootstrap core CSS -->
+    <link href="#{request.contextPath}/resources/css/bootstrap.css" rel="stylesheet"/>    <!-- Add custom CSS here -->
+
+    <link href="#{request.contextPath}/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>      
+
+    <h:outputScript library="primefaces" name="jquery/jquery.js"  target="head"/>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&amp;v=3.4&amp;language=am" type="text/javascript"></script>
+
+
+    <!--
+   <script type="text/javascript" src="#{request.contextPath}/resources/js/lightbox.js"></script>
+   <link rel="stylesheet" href="#{request.contextPath}/resources/css/lightbox.css" type="text/css" media="screen" />
+   <link rel="stylesheet" href="#{request.contextPath}/resources/css/4-col-portfolio.css" type="text/css" media="screen"/>     
+    --> 
+
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Oswald);
+
+        body{
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .btn{
+            margin: 4px;
+            box-shadow: 1px 1px 5px #888888;
+        }
+
+        .btn-xs{
+            font-weight: 300;
+        }
+
+        .btn-hot {
+            color: #fff;
+            background-color: #db5566;
+            border-bottom:2px solid #af4451;
+        }
+
+        .btn-hot:hover, .btn-sky.active:focus, .btn-hot:focus, .open>.dropdown-toggle.btn-hot {
+            color: #fff;
+            background-color: #df6a78;
+            border-bottom:2px solid #b25560;
+            outline: none;}
+
+
+        .btn-hot:active, .btn-hot.active {
+            color: #fff;
+            background-color: #c04b59;
+            border-top:2px solid #9a3c47;
+            margin-top: 2px;
+        }
+
+        .btn-sunny {
+            color: #fff;
+            background-color: #f4ad49;
+            border-bottom:2px solid #c38a3a;
+        }
+
+        .btn-sunny:hover, .btn-sky.active:focus, .btn-sunny:focus, .open>.dropdown-toggle.btn-sunny {
+            color: #fff;
+            background-color: #f5b75f;
+            border-bottom:2px solid #c4924c;
+            outline: none;
+        }
+
+
+        .btn-sunny:active, .btn-sunny.active {
+            color: #fff;
+            background-color: #d69840;
+            border-top:2px solid #ab7a33;
+            margin-top: 2px;
+        }
+
+        .btn-fresh {
+            color: #fff;
+            background-color: #51bf87;
+            border-bottom:2px solid #41996c;
+        }
+
+        .btn-fresh:hover, .btn-sky.active:focus, .btn-fresh:focus, .open>.dropdown-toggle.btn-fresh {
+            color: #fff;
+            background-color: #66c796;
+            border-bottom:2px solid #529f78;
+            outline: none;
+        }
+
+
+        .btn-fresh:active, .btn-fresh.active {
+            color: #fff;
+            background-color: #47a877;
+            border-top:2px solid #39865f;
+            outline: none;
+            outline-offset: none;
+            margin-top: 2px;
+        }
+
+        .btn-sky {
+            color: #fff;
+            background-color: #0bacd3;
+            border-bottom:2px solid #098aa9;
+        }
+
+        .btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open>.dropdown-toggle.btn-sky {
+            color: #fff;
+            background-color: #29b6d8;
+            border-bottom:2px solid #2192ad;
+            outline: none;
+        }
+
+        .btn-sky:active, .btn-sky.active {
+            color: #fff;
+            background-color: #0a97b9;
+            border-top:2px solid #087994;
+            outline-offset: none;
+            margin-top: 2px;
+        }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus {
+            outline: none;
+            outline-offset: 0px;
+        }
+
+
+    </style>
+    <style type="text/css">
+        .ui-growl{
+            position:absolute;
+            top:120px;
+            left:70%;
+        }
+    </style>    
+    <style type="text/css">
+        .ui-layout-north {
+            z-index:20 !important;
+            overflow:visible !important;;
+        }
+
+        .ui-layout-north .ui-layout-unit-content {
+            overflow:visible !important;
+        }
+    </style>
+
+</html>
+
