@@ -3,10 +3,8 @@ package com.progress.web.auth;
 import com.progress.backend.connections.BackendConnectionManager;
 
 import com.project.dto.UserDTO;
-import com.project.interfaces.UserFacadeRemote;
 import java.io.Serializable;
 import java.util.Date;
-import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
