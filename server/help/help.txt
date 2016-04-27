@@ -1,0 +1,30 @@
+1. add user armdev with password jboss2050 to wildfly 10 or put your credentials to 
+com.progress.backend.constraints.StaticConstraints in two frontend wars
+
+public static String SECURITY_PRINCIPAL_FRIST_NODE = "super";
+public static String SECURITY_CREDENTIALS_FIRST_NODE = "powerpassword";
+
+
+
+2. change your standalone.xml/standalonefull.xml with standalone.xml/standalone.xml located in this folder
+   or just copy/paste MySQLDS datasource .
+   
+3. Restore mydbdump.sql to your mysql, in datasource I set mysql user / pass root/root/r
+
+4. Copy mysql folder to wildfly wildfly-10.0.0.Final\modules\system\layers\base\com
+
+5. Start wildfly in port 8080 deploy and copy server-ear and wildfly-frontend . war to
+C:\wildfly-10.0.0.Final\standalone\deployments or just start from netbeans server-ear after it run
+ wildfly-frontend 
+ 
+6. tomcat-frontend deploy and run under apache-tomcat 8, change tomcat 8 port to 9090.
+
+7. now you have 2 front end, one work under tomcat , second under wildfly, both do the same - call ejb.
+
+8. in the web page only one button, click on it and watch result in the console.
+
+9. ejb interfaces located in middle-layer.jar, it is included in the backend and in the frontend.
+
+
+
+
