@@ -1,0 +1,76 @@
+<ehcache>
+	<diskStore path="user.home/frontend_ehcache_storage/frontendone"/>	
+
+	<cacheManagerPeerProviderFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerProviderFactory"
+		properties="peerDiscovery=automatic, multicastGroupAddress=230.0.0.1, multicastGroupPort=4446, timeToLive=32" />
+
+
+	<cacheManagerPeerListenerFactory
+		class="net.sf.ehcache.distribution.RMICacheManagerPeerListenerFactory"
+		properties="port=40001, socketTimeoutMillis=2000" />
+
+	<defaultCache maxElementsInMemory="10000" eternal="false"
+		timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="120" />	
+
+	<cache name="user.results.cache" maxElementsInMemory="1000"
+		eternal="false" overflowToDisk="true" timeToIdleSeconds="120"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="120">
+
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+			properties="replicateAsynchronously=true,
+                replicatePuts=true,
+                replicateUpdates=true,
+                replicateUpdatesViaCopy=true,
+                replicateRemovals=true,
+                asynchronousReplicationIntervalMillis=100" />
+	</cache>
+
+<!--	<cache name="etendering.collections.cache" maxElementsInMemory="100"
+		eternal="false" overflowToDisk="true" timeToIdleSeconds="3600"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="600">
+
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+			properties="replicateAsynchronously=true,
+                replicatePuts=true,
+                replicateUpdates=true,
+                replicateUpdatesViaCopy=true,
+                replicateRemovals=true,
+                asynchronousReplicationIntervalMillis=100" />
+	</cache>-->
+
+<!--	<cache name="eauction.cache" maxElementsInMemory="100"
+		eternal="false" overflowToDisk="true" timeToIdleSeconds="36000"
+		diskPersistent="false" diskExpiryThreadIntervalSeconds="600">
+
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+			properties="replicateAsynchronously=true,
+                replicatePuts=true,
+                replicateUpdates=true,
+                replicateUpdatesViaCopy=true,
+                replicateRemovals=true,
+                asynchronousReplicationIntervalMillis=100" />
+	</cache>-->
+
+<!--    <cache name="eauction.messageboard.cache"
+           maxElementsInMemory="100"
+           eternal="false"
+           overflowToDisk="true"
+           timeToIdleSeconds="3600"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="600">
+
+		<cacheEventListenerFactory
+			class="net.sf.ehcache.distribution.RMICacheReplicatorFactory"
+			properties="replicateAsynchronously=true,
+                replicatePuts=true,
+                replicateUpdates=true,
+                replicateUpdatesViaCopy=true,
+                replicateRemovals=true,
+                asynchronousReplicationIntervalMillis=100" />
+    </cache>-->
+</ehcache>
